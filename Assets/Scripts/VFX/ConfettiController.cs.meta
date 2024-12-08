@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c7da5755996dd264285cca98f55b27f0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - VFX_Confetti: {fileID: 1134139638697110057, guid: 19d78fa8a6b697c48927176f8f6e48a4,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,4 @@
+.button {
+    background-image: url("project://database/Assets/Art/Textures/UI/T_UI_Btn_OpenRewards.png?fileID=2800000&guid=10750be5d1ecf4e499619a38c29b9401&type=3#T_UI_Btn_OpenRewards");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1135c56baba4d5a48a1715bc4be0e8b9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - spriteSheet: {fileID: 2800000, guid: 7a1fa915d55239d47ab3ca63886ba20b, type: 3}
+  - PF_PresentBox: {fileID: 8423443528895288954, guid: 6a0add93425d5084cb0d5f211c33b038,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
