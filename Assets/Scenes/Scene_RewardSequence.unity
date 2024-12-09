@@ -162,6 +162,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &657602262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8947377554830024722, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1497469486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &707660957
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +458,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342100312}
     m_Modifications:
+    - target: {fileID: 1736516080902467527, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.094
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736516080902467527, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736516080902467527, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319882099193122289, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123970341923094143, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123970341923094143, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.014
+      objectReference: {fileID: 0}
     - target: {fileID: 8423443528895288954, guid: e3a3920cd56ce0a4c9ac7d92bcdde52d,
         type: 3}
       propertyPath: m_Name
@@ -597,3 +633,4 @@ MonoBehaviour:
   loopAnimation: 1
   PF_PresentBox: {fileID: 133877480}
   OpenBox_EventObjects: {fileID: 1497469488}
+  Prizes: {fileID: 657602262}
