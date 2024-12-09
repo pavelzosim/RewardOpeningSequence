@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -91,21 +91,21 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: 47
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_0
+      name: T_ui_Btn_OpenRewards_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fa185d0f7bf7064593e98659ba6d1e4
-      internalID: -1846420499
+      spriteID: 65fa064a88d904641b6374af9da65241
+      internalID: 330941690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_1
+      name: T_ui_Btn_OpenRewards_sheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9829a70a85b63b94cae15f91c3159dc1
-      internalID: 657544605
+      spriteID: 8c8a4c880e8f1f74a82224d925f7f929
+      internalID: 1460655720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_2
+      name: T_ui_Btn_OpenRewards_sheet_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3b6689ae37ae6c438bc5feedcfa6089
-      internalID: 2027538747
+      spriteID: d1b9f583a126ec84d90522de5c071afc
+      internalID: 1237352215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_3
+      name: T_ui_Btn_OpenRewards_sheet_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd82d001dee3709489866147e711a5f9
-      internalID: -965937836
+      spriteID: d885ff091e839be4fbe4ca16e39194b3
+      internalID: 1017294741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_4
+      name: T_ui_Btn_OpenRewards_sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76d2c33c4c7b85d4ea9379b3975f306a
-      internalID: -1117875392
+      spriteID: 81a747733ae93d64a83e4d932ad2d9d8
+      internalID: -1344866829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_5
+      name: T_ui_Btn_OpenRewards_sheet_5
       rect:
         serializedVersion: 2
         x: 512
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4878618c3efd574d94b1ded0a36c283
-      internalID: -1172849034
+      spriteID: cdd3e765ad8257c4ca6388a4ace13916
+      internalID: -915324832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_6
+      name: T_ui_Btn_OpenRewards_sheet_6
       rect:
         serializedVersion: 2
         x: 1024
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13d9b4a0607ddb44b8c2af400f9ff6f3
-      internalID: -1436721452
+      spriteID: 6f7b77340e056374ba1d8c434d4847ba
+      internalID: 1013931165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_7
+      name: T_ui_Btn_OpenRewards_sheet_7
       rect:
         serializedVersion: 2
         x: 1536
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 007bcdf3fe985964e8526f48133e7400
-      internalID: -790398472
+      spriteID: 89b00b722560e6a44ac66ac0b66acbf9
+      internalID: 1074288869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_8
+      name: T_ui_Btn_OpenRewards_sheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dc63445b3bd38443b4d1fa1629933ad
-      internalID: -701007689
+      spriteID: 7153720b56563f446a984899e2009f07
+      internalID: 232649662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_9
+      name: T_ui_Btn_OpenRewards_sheet_9
       rect:
         serializedVersion: 2
         x: 512
@@ -308,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75779b2074122a1498160c6bef1f7951
-      internalID: 1153614031
+      spriteID: 621ab745922ecb443a31829218d03f74
+      internalID: -811988647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_10
+      name: T_ui_Btn_OpenRewards_sheet_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511a4c50ee4f5944086472cc549f9885
-      internalID: -645714926
+      spriteID: 48f9b441f5bb6fd45b3af108fe154dc8
+      internalID: -1207023363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_11
+      name: T_ui_Btn_OpenRewards_sheet_11
       rect:
         serializedVersion: 2
         x: 1536
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7ab58933a98d324aa05a1937f97ed52
-      internalID: -8018097
+      spriteID: de90b50ceedc872409a6460e09f0cb8c
+      internalID: 1592035135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_12
+      name: T_ui_Btn_OpenRewards_sheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02afa11d5febf70478bfe4e72e2dfd4c
-      internalID: 207975100
+      spriteID: 93ae163cc9807ce4dbe2f9aff96ceaf7
+      internalID: -450862297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_13
+      name: T_ui_Btn_OpenRewards_sheet_13
       rect:
         serializedVersion: 2
         x: 512
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16617a146b53839409ae445292bc0c90
-      internalID: 883741290
+      spriteID: 3903699c1cdb0b34c93dfb2fa81f8670
+      internalID: 2025674544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_14
+      name: T_ui_Btn_OpenRewards_sheet_14
       rect:
         serializedVersion: 2
         x: 1024
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f75c8d071702f140a1c54b1287033d5
-      internalID: -59601015
+      spriteID: 06a8a8d44c70037468977ff917ae711b
+      internalID: 343433819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_ui_Btn_OpenRewards_Sheet_15
+      name: T_ui_Btn_OpenRewards_sheet_15
       rect:
         serializedVersion: 2
         x: 1536
@@ -434,8 +434,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7777f44ef4c0f354383ed34abfdf9aa3
-      internalID: -1925666704
+      spriteID: 9c82efd79f98b454ca3b33f391962024
+      internalID: 2066072745
       vertices: []
       indices: 
       edges: []
@@ -443,7 +443,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 138c1dea413963240a122a28befe767f
+    spriteID: bd0791843aa730149a50ff652e68cd8f
     internalID: 0
     vertices: []
     indices: 
@@ -451,22 +451,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      T_ui_Btn_OpenRewards_Sheet_0: -1846420499
-      T_ui_Btn_OpenRewards_Sheet_1: 657544605
-      T_ui_Btn_OpenRewards_Sheet_10: -645714926
-      T_ui_Btn_OpenRewards_Sheet_11: -8018097
-      T_ui_Btn_OpenRewards_Sheet_12: 207975100
-      T_ui_Btn_OpenRewards_Sheet_13: 883741290
-      T_ui_Btn_OpenRewards_Sheet_14: -59601015
-      T_ui_Btn_OpenRewards_Sheet_15: -1925666704
-      T_ui_Btn_OpenRewards_Sheet_2: 2027538747
-      T_ui_Btn_OpenRewards_Sheet_3: -965937836
-      T_ui_Btn_OpenRewards_Sheet_4: -1117875392
-      T_ui_Btn_OpenRewards_Sheet_5: -1172849034
-      T_ui_Btn_OpenRewards_Sheet_6: -1436721452
-      T_ui_Btn_OpenRewards_Sheet_7: -790398472
-      T_ui_Btn_OpenRewards_Sheet_8: -701007689
-      T_ui_Btn_OpenRewards_Sheet_9: 1153614031
+      T_ui_Btn_OpenRewards_sheet_0: 330941690
+      T_ui_Btn_OpenRewards_sheet_1: 1460655720
+      T_ui_Btn_OpenRewards_sheet_10: -1207023363
+      T_ui_Btn_OpenRewards_sheet_11: 1592035135
+      T_ui_Btn_OpenRewards_sheet_12: -450862297
+      T_ui_Btn_OpenRewards_sheet_13: 2025674544
+      T_ui_Btn_OpenRewards_sheet_14: 343433819
+      T_ui_Btn_OpenRewards_sheet_15: 2066072745
+      T_ui_Btn_OpenRewards_sheet_2: 1237352215
+      T_ui_Btn_OpenRewards_sheet_3: 1017294741
+      T_ui_Btn_OpenRewards_sheet_4: -1344866829
+      T_ui_Btn_OpenRewards_sheet_5: -915324832
+      T_ui_Btn_OpenRewards_sheet_6: 1013931165
+      T_ui_Btn_OpenRewards_sheet_7: 1074288869
+      T_ui_Btn_OpenRewards_sheet_8: 232649662
+      T_ui_Btn_OpenRewards_sheet_9: -811988647
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -2,6 +2,7 @@
 using UnityEngine.UIElements;
 using DG.Tweening;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Unboxing : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Unboxing : MonoBehaviour
 
     // References for UI and animation components
     public GameObject PF_PresentBox; // The object for the present box (used to trigger animation)
+    public GameObject OpenBox_EventObjects; // The object for the cone inside the box (should be initially hidden)
     private Animator animator; // The animator component attached to the present box
     private Button buttonOpenBox; // Button to trigger opening the box
     private VisualElement prizeLabel; // UI element showing the prize after the box is opened
@@ -38,6 +40,9 @@ public class Unboxing : MonoBehaviour
         prizeLabel.style.display = DisplayStyle.None;
         prizeLabel.style.opacity = 0f;
 
+        // Initially hide the cone object
+        OpenBox_EventObjects.SetActive(false);
+
         // Create sprite frames from the sprite sheet for the animation
         CreateSpriteSheetFrames();
 
@@ -57,11 +62,7 @@ public class Unboxing : MonoBehaviour
 
     private void Update()
     {
-        // Update the sprite animation if the box is opening
-        if (isOpening)
-        {
-            UpdateSpriteAnimation();
-        }
+        // This update is now replaced by the coroutine, no need to handle the animation here anymore
     }
 
     // Called when the "Open Box" button is clicked
@@ -70,13 +71,49 @@ public class Unboxing : MonoBehaviour
         // Only start the animation if the box isn't already opening
         if (!isOpening)
         {
-            isOpening = true; // Set the flag indicating the box is opening
-            currentFrame = startFrame; // Start the animation from the first frame
-            frameTimer = 0f; // Reset the frame timer
+            StartCoroutine(StartAnimation());
+        }
+    }
 
-            // Fade out the "Open Box" button and start the animation
-            FadeOutButton();
-            ExecuteTrigger("TrOpen");
+    // Coroutine for the animation
+    private IEnumerator StartAnimation()
+    {
+        currentFrame = startFrame;
+        frameTimer = 0f;
+        isOpening = true;
+
+        // Fade out the "Open Box" button
+        FadeOutButton();
+        ExecuteTrigger("TrOpen");
+
+        // Show the cone after the animation starts
+        ShowOpenBox_EventObjects();
+
+        // Continue updating frames while the box is opening
+        while (isOpening)
+        {
+            frameTimer += Time.deltaTime; // Update frame timer
+
+            if (frameTimer >= frameRate)
+            {
+                frameTimer -= frameRate; // Reset frame timer
+
+                currentFrame++; // Go to the next frame
+                if (currentFrame > endFrame)
+                {
+                    currentFrame = loopAnimation ? startFrame : endFrame;
+                    isOpening = !loopAnimation; // Stop opening if not looping
+                }
+
+                // Update button background only if the frame has changed
+                var currentFrameTexture = frames[currentFrame];
+                if (buttonOpenBox.style.backgroundImage != currentFrameTexture)
+                {
+                    buttonOpenBox.style.backgroundImage = new StyleBackground(currentFrameTexture);
+                }
+            }
+
+            yield return null; // Wait until the next frame
         }
     }
 
@@ -98,13 +135,23 @@ public class Unboxing : MonoBehaviour
             buttonOpenBox.style.backgroundImage = new StyleBackground(frames[startFrame]);
         }
 
-        // Show the "Open Box" button again with a fade-in effect
+        // Reset the button visibility with a fade-in effect
         buttonOpenBox.style.display = DisplayStyle.Flex;
         buttonOpenBox.style.opacity = 1f;
         DOTween.To(() => buttonOpenBox.style.opacity.value, x => buttonOpenBox.style.opacity = x, 1f, 1f);
 
         // Trigger the "Reset" animation
         ExecuteTrigger("TrReset");
+
+        // Remove the cone (PF_Cone) when the box is reset
+        RemoveOpenBox_EventObjects();
+    }
+
+    // Method to remove the PF_Cone (deactivate or destroy it)
+    private void RemoveOpenBox_EventObjects()
+    {
+        // Deactivate the cone object (hides it without destroying it)
+        OpenBox_EventObjects.SetActive(false);
     }
 
     // Executes an animation trigger for the present box
@@ -117,31 +164,6 @@ public class Unboxing : MonoBehaviour
         else
         {
             Debug.LogWarning($"Animator is null. Trigger: {trigger} not executed.");
-        }
-    }
-
-    // Updates the sprite animation by advancing frames
-    private void UpdateSpriteAnimation()
-    {
-        if (frames.Count == 0 || buttonOpenBox == null) return; // Return if there are no frames or button
-
-        frameTimer += Time.deltaTime; // Update the frame timer
-
-        // Check if it's time to update to the next frame
-        if (frameTimer >= frameRate)
-        {
-            frameTimer -= frameRate; // Reset the frame timer after the frame update
-            currentFrame++; // Move to the next frame
-
-            // Check if the animation has reached the end frame and handle looping
-            if (currentFrame > endFrame)
-            {
-                currentFrame = loopAnimation ? startFrame : endFrame; // Loop or stop at the last frame
-                isOpening = !loopAnimation; // Stop opening if not looping
-            }
-
-            // Update the button's background image with the new frame
-            buttonOpenBox.style.backgroundImage = new StyleBackground(frames[currentFrame]);
         }
     }
 
@@ -165,7 +187,9 @@ public class Unboxing : MonoBehaviour
 
             // Create a new texture for the frame from the sprite sheet
             Texture2D frameTexture = new Texture2D(frameWidth, frameHeight);
-            frameTexture.SetPixels(spriteSheet.GetPixels((int)frameRect.x, (int)frameRect.y, frameWidth, frameHeight)); // Extract pixels
+
+            // Extract pixels using GetPixels with a Rect parameter
+            frameTexture.SetPixels(spriteSheet.GetPixels((int)frameRect.x, (int)frameRect.y, frameWidth, frameHeight));
             frameTexture.Apply(); // Apply changes to the texture
 
             frames.Add(frameTexture); // Add the frame to the list of frames
@@ -191,5 +215,12 @@ public class Unboxing : MonoBehaviour
     {
         prizeLabel.style.display = DisplayStyle.Flex; // Show the prize label
         DOTween.To(() => prizeLabel.style.opacity.value, x => prizeLabel.style.opacity = x, 1f, 1f); // Fade in the prize label
+    }
+
+    // Shows the PF_Cone object (cone) when the box is opened (triggered via animation event)
+    private void ShowOpenBox_EventObjects()
+    {
+        // We trigger this method via the animation event after the box is opened
+        OpenBox_EventObjects.SetActive(true); // Activate the cone
     }
 }

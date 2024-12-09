@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 485d0363504d4b04a864a4834c9d8a65
+guid: d315a3b21e85d33458b98f46828549c8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_PresentBox
-    second: {fileID: 2100000, guid: ea0c5eabc9bbed34cb11e50472046cc9, type: 2}
+      name: texture_material
+    second: {fileID: 2100000, guid: 5423095806a0c5d46ac6d1d836f46d67, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,7 +52,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
