@@ -43,3 +43,6 @@ fabric.properties
 *.apk
 *.aab
 *.unitypackage
+
+# Ignore Visual Studio files
+.vs/
